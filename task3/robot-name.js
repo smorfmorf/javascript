@@ -43,24 +43,11 @@ export class Robot {
 
   static releaseNames() {
     // Robot.usedNames.clear()
-    console.log(Robot.usedNames)
   }
 }
 
 
 
-// class Robot {
-//   // В статических полях можно делать какие-то общие данные. Основная суть статических методов и свойств в том, что они привязаны не к конкретным экземплярам класса, а к самому классу.
-//   static usedNames = new Set();
-
-//   // lvl и name - явл свойствами экземпляра класса 
-//   lvl = '10'
-
-//   constructor() {
-//     this.name = new Date();
-//     Robot.arrNames.add(this.name)
-//   }
-// }
 
 
 // const names = []

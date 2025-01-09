@@ -58,4 +58,6 @@ export class ValueError extends Error {
 
 
 const account = new BankAccount('mazaka');
+account.open();
+console.log(account.balance);
 console.log('account: ', account);

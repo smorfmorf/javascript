@@ -7,8 +7,21 @@ export const valid = (str) => {
   if (!str || str.trim().length <= 1) return false;
   if (str === '0') return false;
 
-  str = str.replace(/\s+/g, '');
-  str = str.split('').map(Number);
+  // str = str.replace(/\s+/g, ''); // удаляем все пробелы из строки
+  // str = str.split('').map(Number);
+
+  // удаляем все пробелы из строки и преобразуем в числа
+  str = Array.from(str).filter((str, i) => {
+    if (str.charCodeAt() != 32) {
+      console.log(str.charCodeAt());
+      return true;
+    }
+  }
+  ).map(Number)
+  console.log('str: ', str);
+
+
+
 
 
   let sum = 0;
@@ -31,7 +44,7 @@ export const valid = (str) => {
 
   return sum % 10 === 0;
 };
-console.log(valid(' 0')); // false
-console.log(valid('0000     0')); // true
-console.log(valid('059')); // true
-console.log(valid('123')); // false
+console.log(valid('   0213')); // false
+// console.log(valid('0000     0')); // true
+// console.log(valid('059')); // true
+// console.log(valid('123')); // false

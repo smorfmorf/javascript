@@ -33,11 +33,7 @@ export class Robot {
   }
 
   turnLeft() {
-
     this.direction = this.directions[(this.directions.indexOf(this.direction) - 1 + 4) % 4];
-    // const currentIndex = this.directions.indexOf(this.direction);
-    // const newIndex = (currentIndex - 1 + 4) % 4;
-    // this.direction = this.directions[newIndex];
   }
 
   place({ x, y, direction }) {

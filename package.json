@@ -28,7 +28,7 @@
    },
    "dependencies": {},
    "scripts": {
-      "start": "jest ./task10",
+      "start": "jest ./task11",
       "watch": "jest --watch ./*",
       "lint": "eslint .",
       "test:secret": "jest task6/secret-handshake.spec.js"
